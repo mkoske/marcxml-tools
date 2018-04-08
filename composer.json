@@ -1,5 +1,6 @@
 {
     "name": "piki/marcxml-tools",
+    "description": "A tool to filter MARCXML.",
     "version": "0.1",
     "require": {
         "symfony/event-dispatcher": "^3.3",

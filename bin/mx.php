@@ -24,7 +24,7 @@ if ($argc !== 2) {
 // Configuration contains all the config that is used during the app runtime.
 // Currently, there's only namespace and namespace prefix in config.
 $config = json_decode(file_get_contents(
-    __DIR__ . "/config.json"
+    __DIR__ . "/config/namespaces.json"
 ), true);
 
 // Don't change the order. Events needs logging. But you can wire up more and/or

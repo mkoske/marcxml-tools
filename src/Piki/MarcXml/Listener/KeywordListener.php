@@ -29,15 +29,14 @@ class KeywordListener
         $record = $event->getRecord();
 
         $datafields = $record->query("//{{prefix}}:datafield[@tag = '650']");
-        foreach($datafields as $datafield) {
-
+        foreach ($datafields as $datafield) {
             // //subfield[@code = '2'] has the dictionary name, like YSA etc.
             $result = $record->query(
                 "//{{prefix}}:subfield[@code = '2']"
             );
 
             // N/A if not available, obviously
-            if($result->length < 1) {
+            if ($result->length < 1) {
                 $dictionary = "N/A";
             } else {
                 $dictionary = $result->item(0)->nodeValue;
@@ -46,12 +45,13 @@ class KeywordListener
             // Keywords
             $result = $record->query(
                 "{{prefix}}:subfield[@code = 'a' or @code = 'x']",
-                $datafield, true
+                $datafield,
+                true
             );
 
-            if($result->length > 0) {
+            if ($result->length > 0) {
                 $keywords[$dictionary] = [];
-                foreach($result as $subfield) {
+                foreach ($result as $subfield) {
                     $keywords[$dictionary][] = $subfield->nodeValue;
                 }
 
@@ -60,7 +60,7 @@ class KeywordListener
         }
 
         $parts = [];
-        foreach($keywords as $key => $words) {
+        foreach ($keywords as $key => $words) {
             $parts[] = "{$key}: $words";
         }
 

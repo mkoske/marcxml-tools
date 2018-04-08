@@ -16,7 +16,7 @@ use PIKI\MARCXML\Event\RecordEvent;
 require_once __DIR__ . "/vendor/autoload.php";
 
 // This script requires input directory as a command line -argument.
-if($argc !== 2) {
+if ($argc !== 2) {
     echo "Usage:\n php mx.php <input-dir>\n";
     exit;
 }
@@ -38,8 +38,7 @@ $events = include "events.php";
 // find the code for this filter in `src/MARCXML/Iterator` since it extends PHPs
 // FilterIterator.
 $iterator = new XmlFilter(new DirectoryIterator($argv[1]));
-foreach($iterator as $item) {
-
+foreach ($iterator as $item) {
     $reader = new XMLReader;
 
     // Handling data
@@ -56,8 +55,7 @@ foreach($iterator as $item) {
     $reader->read();
 
     do {
-
-        if($reader->name !== "record") {
+        if ($reader->name !== "record") {
             break;
         }
 
@@ -72,8 +70,7 @@ foreach($iterator as $item) {
         // instance (a RecordEvent-instance) which has acecss to the Record
         // itself.
         $dispatcher->dispatch(RecordEvent::NAME, new RecordEvent($record));
-
-    } while($reader->next());
+    } while ($reader->next());
 
     // Closing  the reader before starting loop all over again with new file in
     // the set of files.

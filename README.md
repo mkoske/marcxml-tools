@@ -1,6 +1,5 @@
 # MarcXML-tools
-
-![https://travis-ci.org/mkoske/marcxml-tools.svg?branch=master](https://travis-ci.org/mkoske/marcxml-tools.svg?branch=master)
+[![https://travis-ci.org/mkoske/marcxml-tools.svg?branch=master](https://travis-ci.org/mkoske/marcxml-tools.svg?branch=master)](https://travis-ci.org/mkoske/marcxml-tools)
 
 Tools, that were originally used to work with the data dump of [PIKI](https://piki.verkkokirjasto.fi/web/arena)-libraries.
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace PIKI\MARCXML\Listener;
+namespace Piki\MarcXml\Listener;
 
 use Symfony\Component\EventDispatcher\Event;
 use Psr\Log\LoggerInterface;

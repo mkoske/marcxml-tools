@@ -1,6 +1,6 @@
 <?php
 
-namespace PIKI\MARCXML\Xml;
+namespace Piki\MarcXml\Xml;
 
 use DOMDocument;
 use DOMNodeList;

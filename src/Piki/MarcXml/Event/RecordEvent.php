@@ -1,9 +1,9 @@
 <?php
 
-namespace PIKI\MARCXML\Event;
+namespace Piki\MarcXml\Event;
 
 use Symfony\Component\EventDispatcher\Event;
-use PIKI\MARCXML\Xml\Record;
+use Piki\MarcXml\Xml\Record;
 
 /**
  * A record event

@@ -1,6 +1,6 @@
 <?php
 
-namespace PIKI\MARCXML\Iterator;
+namespace Piki\MarcXml\Iterator;
 
 use FilterIterator;
 

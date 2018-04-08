@@ -7,6 +7,6 @@
         "monolog/monolog": "^1.23"
     },
     "autoload": {
-        "psr-4": { "PIKI\\": "src/" }
+        "psr-4": { "Piki\\": "src/Piki" }
     }
 }

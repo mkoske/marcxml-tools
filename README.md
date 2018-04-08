@@ -1,5 +1,7 @@
 # MarcXML-tools
 
+![https://travis-ci.org/mkoske/marcxml-tools.svg?branch=master](https://travis-ci.org/mkoske/marcxml-tools.svg?branch=master)
+
 Tools, that were originally used to work with the data dump of [PIKI](https://piki.verkkokirjasto.fi/web/arena)-libraries.
 
 Currently, it's being developed further and it can (hopefully) be used with other MARXML-formatted data, too.

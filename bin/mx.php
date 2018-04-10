@@ -9,11 +9,12 @@
  * @license MIT-License, see LICENCE-file for more information
  */
 
-use PIKI\MARCXML\Xml\Record;
-use PIKI\MARCXML\Iterator\XmlFilter;
-use PIKI\MARCXML\Event\RecordEvent;
+require_once __DIR__ . "/../vendor/autoload.php";
 
-require_once __DIR__ . "/vendor/autoload.php";
+use Piki\MarcXml\Xml\Record;
+use Piki\MarcXml\Iterator\XmlFilter;
+use Piki\MarcXml\Event\RecordEvent;
+
 
 // This script requires input directory as a command line -argument.
 if ($argc !== 2) {
@@ -24,7 +25,7 @@ if ($argc !== 2) {
 // Configuration contains all the config that is used during the app runtime.
 // Currently, there's only namespace and namespace prefix in config.
 $config = json_decode(file_get_contents(
-    __DIR__ . "/config/namespaces.json"
+    __DIR__ . "/../config/namespaces.json"
 ), true);
 
 // Don't change the order. Events needs logging. But you can wire up more and/or
